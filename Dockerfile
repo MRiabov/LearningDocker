@@ -7,6 +7,8 @@ COPY .mvn/ .mvn
 
 RUN ./mvnw dependency:resolve
 
+EXPOSE 3000
+
 COPY src ./src
 
 CMD ["./mvnw", "spring-boot:run"]
